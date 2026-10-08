@@ -67,51 +67,46 @@ The system provides authentication and user management features along with medic
 
 ## 🏗️ System Architecture
 
-The application follows a desktop-based architecture using Java Swing for the user interface, Java for application logic, JDBC for database connectivity, and MySQL for data storage.
+The Pharmacy Management System follows a desktop-based architecture built with Java Swing, Java, JDBC, and MySQL.
 
 ### Architecture Flow
 
-┌─────────────────────────┐
-│       Java Swing        │
-│     User Interface      │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│    Java Application     │
-│        Logic            │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│          JDBC           │
-│   Database Connectivity │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│         MySQL           │
-│        Database         │
-└─────────────────────────┘
+```text
+┌─────────────────────────────┐
+│        Java Swing UI        │
+│     User Interface Layer    │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│      Java Application       │
+│       Business Logic        │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│            JDBC             │
+│    Database Connectivity    │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│           MySQL             │
+│       Database Layer        │
+└─────────────────────────────┘
 
-Application Flow
-Login / Authentication
-          │
-          ▼
-   User Dashboard
-          │
-     ┌────┼────┐
-     ▼    ▼    ▼
-    Add  View Update
-    User User User
-          │
-          ▼
-    Admin Dashboard
-          │
-    ┌─────┼──────────────┐
-    ▼     ▼      ▼       ▼
-Medicine  Sales  Billing  Users
-Management       Management
+Application Modules
+                    Login / Authentication
+                              │
+                ┌─────────────┴─────────────┐
+                │                           │
+                ▼                           ▼
+        User Management             Admin Dashboard
+                │                           │
+        ┌───────┼───────┐          ┌───────┼────────┐
+        │       │       │          │       │        │
+       Add     View   Update     Medicine  Sales   Billing
+       User    User    User     Management
 
 
 📦 Main Modules
