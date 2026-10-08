@@ -157,6 +157,7 @@ Pharmacy-Management-System/
 ├── verify.java
 ├── viewbill.java
 └── viewmedicine.java
+```
 
 🖥️ Application Screenshots
 Screenshots demonstrate the main application workflows, including authentication, user management, medicine management, sales, and billing.
